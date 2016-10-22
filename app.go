@@ -21,7 +21,7 @@ func init() {
 }
 
 func main() {
-	d := net.Dialer{Timeout: 10 * time.Second}
+	d := net.Dialer{Timeout: 2 * time.Second}
 	p := make(chan struct{}, 500) // make 500 parallel connection
 	wg := sync.WaitGroup{}
 
